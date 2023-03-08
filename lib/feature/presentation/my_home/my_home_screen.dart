@@ -1,8 +1,9 @@
+import 'package:count_this/feature/presentation/my_home_view_model.dart';
 import 'package:flutter/material.dart';
 
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomeScreen extends StatefulWidget {
+  const MyHomeScreen({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -16,11 +17,11 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomeScreen> createState() => _MyHomeScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _MyHomeScreenState extends State<MyHomeScreen> {
+  MyHomeViewModel viewModel = MyHomeViewModel();
 
   void _incrementCounter() {
     setState(() {
@@ -29,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+     viewModel.increment();
     });
   }
 
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
+        // Here we take the value from the MyHomeScreen object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
@@ -71,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              '${viewModel.counterValue()}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
