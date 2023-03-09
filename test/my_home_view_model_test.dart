@@ -14,4 +14,13 @@ void main() {
         var counterValue = viewModel.counterValue();
         expect(counterValue, 1);
     });
+
+
+    test('MyHomeViewModel is incrementing counter twice', (){
+        var viewModel = MyHomeViewModel();
+        viewModel.increment();
+        viewModel.increment();
+        var counterValue = viewModel.counterValue();
+        expect(counterValue, 2);
+    });
 }
