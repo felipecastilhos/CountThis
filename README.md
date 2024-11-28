@@ -1,16 +1,5 @@
 # count_this
+This project has been ARCHIVED and it's most an abandonware. 
+Because this project lacks documentation you probably won't find anything useful here since it's outdated.  
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I’ve completed my goals for studing Flutter archtecture for the tasks that I had in hand in the past. After this I did a few commercial apps in Flutter.
